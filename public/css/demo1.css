@@ -56,10 +56,10 @@
 }
 
 .bb-custom-icon-arrow-right:before {	
-	content: "►";
+	content: ">";
 }
 .bb-custom-icon-arrow-left:before {
-	content: "◄";	
+	content: "<";	
 }
 
 
