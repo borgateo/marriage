@@ -1,52 +1,66 @@
+This article was forked from [Marshall Huss's Bamboo stack article](https://devcenter.heroku.com/articles/static-sites-on-heroku) and updated by [Lee Reilly](http://www.leereilly.net). Lee is a toolsmith and master pintsman hacking on [GitHub Enterprise](https://enterprise.github.com).
 
-BookBlock
-=========
+# Static Sites with Ruby on Heroku/Cedar
 
-A jQuery plugin that will create a booklet-like component that let's you navigate through its items by flipping the pages.
+Sometimes you just have a static website with one or two pages. Here is a simple way to host your static site and cache it on Heroku using a [Rack](http://rack.rubyforge.org/) app.
 
-[article on Codrops](http://tympanus.net/codrops/2012/09/03/bookblock-a-content-flip-plugin/)
-
-[demo](http://tympanus.net/Development/BookBlock/)
-
-License: http://tympanus.net/codrops/licensing/
-
-### BookBlock Configuration Options
+Your folder should be organized like this:
 
 ```
-// page to start on
-startPage : 1,
-// vertical or horizontal flip
-orientation : 'vertical',
-// ltr (left to right) or rtl (right to left)
-direction : 'ltr',
-// speed for the flip transition in ms
-speed : 1000,
-// easing for the flip transition
-easing : 'ease-in-out',
-// if set to true, both the flipping page and the sides will have an overlay to simulate shadows
-shadows : true,
-// opacity value for the "shadow" on both sides (when the flipping page is over it)
-// value : 0.1 - 1
-shadowSides : 0.2,
-// opacity value for the "shadow" on the flipping page (while it is flipping)
-// value : 0.1 - 1
-shadowFlip : 0.1,
-// if we should show the first item after reaching the end
-circular : false,
-// if we want to specify a selector that triggers the next() function. example: ´#bb-nav-next´
-nextEl : '',
-// if we want to specify a selector that triggers the prev() function
-prevEl : '',
-// autoplay. If true it overwrites the circular option to true
-autoplay : false,
-// time (ms) between page switch, if autoplay is true
-interval : 3000,
-// callback after the flip transition
-// old is the index of the previous item
-// page is the current item´s index
-// isLimit is true if the current page is the last one (or the first one)
-onEndFlip : function(old, page, isLimit) { return false; },
-// callback before the flip transition
-// page is the current item´s index
-onBeforeFlip : function(page) { return false; }
+- MySite
+  |- config.ru
+  |- Gemfile
+  |- public
+    |- index.html
+    |- images
+    |- js
+    |- css
 ```
+
+In `Gemfile` file add the following:
+
+```ruby
+source :rubygems
+
+gem 'rack'
+```
+
+You should use [bundler](https://devcenter.heroku.com/articles/bundler) to generate the `Gemfile.lock` file:
+
+```
+GEM
+  remote: http://rubygems.org/
+  specs:
+    rack (1.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rack
+```
+
+In `config.ru` file add the following:
+
+```ruby
+use Rack::Static,
+  :urls => ["/images", "/js", "css"],
+  :root => "public"
+
+run lambda { |env|
+  [
+    200,
+    {
+      'Content-Type'  => 'text/html',
+      'Cache-Control' => 'public, max-age=86400'
+    },
+    File.open('public/index.html', File::RDONLY)
+  ]
+}
+```
+
+This assumes that your template uses relative references to the images and stylesheets. Go ahead and deploy the app. If you are not sure how to deploy to Heroku check out the [quickstart guide](https://devcenter.heroku.com/articles/quickstart).
+
+And there you go, a static site being served on Heroku completely cached and easily served using a single [dyno](https://devcenter.heroku.com/articles/dynos).
+
+If this article is incorrect or outdated, or omits critical information, please [let us know](https://devcenter.heroku.com/articles/static-sites-on-heroku#). For all other issues, please see our [support channels](https://devcenter.heroku.com/articles/support-channels).
