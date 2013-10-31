@@ -1,13 +1,20 @@
-
 .bb-custom-wrapper {
-	/* width: 420px; */
+	width: 560px;
 	position: relative;
 	margin: 0 auto 40px;
 	text-align: center;
 }
 
 .bb-custom-wrapper .bb-bookblock {
+	width: 560px;
+	height: 300px;
 	box-shadow: 0 12px 20px -10px rgba(81,64,49,0.6);
+}
+
+.bb-custom-img {
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .bb-custom-wrapper h3 {
@@ -31,7 +38,7 @@
 	height: 30px;
 	text-align: center;
 	border-radius: 2px;
-	background: #72b890;
+	background: #883b61;
 	color: #fff;
 	font-size: 0;
 	margin: 2px;
@@ -55,13 +62,13 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-.bb-custom-icon-arrow-right:before {	
+
+.bb-custom-icon-arrow-right:before {
 	content: ">";
 }
 .bb-custom-icon-arrow-left:before {
-	content: "<";	
+	content: "<";
 }
-
 
 /* No JS */
 .no-js .bb-custom-wrapper {

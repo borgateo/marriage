@@ -1,0 +1,335 @@
+#full-clndr {
+    background-color: #EBEBEB;
+    box-shadow: 4px 4px 0 #343434;
+    font-weight: 700;
+}
+#full-clndr .clndr-grid {
+    border-right: 2px solid #FFFFFF;
+    float: left;
+    width: 65%;
+}
+#full-clndr .clndr-grid .days-of-the-week {
+    background-color: #3883A3;
+    width: 100%;
+}
+#full-clndr .clndr-grid .days-of-the-week .header-day {
+    color: #FFFFFF;
+    float: left;
+    padding: 14px;
+    text-align: center;
+    width: 14.2857%;
+}
+#full-clndr .clndr-grid .days {
+    width: 100%;
+}
+#full-clndr .clndr-grid .days .day, #full-clndr .clndr-grid .days .empty {
+    background-color: #EBEBEB;
+    background-image: url("http://kylestetz.github.io/CLNDR/css/./triangle.svg");
+    background-position: center center;
+    background-size: cover;
+    border-bottom: 2px solid #FFFFFF;
+    color: #4F4F4F;
+    float: left;
+    height: 66px;
+    padding: 24px 0;
+    text-align: center;
+    width: 14.2857%;
+}
+#full-clndr .clndr-grid .days .day.event .day-number, #full-clndr .clndr-grid .days .empty.event .day-number {
+    border-bottom: 2px solid #3883A3;
+    padding-bottom: 4px;
+}
+#full-clndr .clndr-grid .days .day.adjacent-month .day-number, #full-clndr .clndr-grid .days .empty.adjacent-month .day-number {
+    opacity: 0.3;
+}
+#full-clndr .clndr-grid .days .today {
+    background-color: #FFFFFF;
+    background-image: none;
+}
+#full-clndr .event-listing {
+    float: left;
+    width: 35%;
+}
+#full-clndr .event-listing .event-listing-title {
+    background-color: #71BBD2;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    padding: 14px;
+    text-align: center;
+}
+#full-clndr .event-listing .event-item {
+    color: #4F4F4F;
+    padding: 14px;
+}
+#full-clndr .event-listing .event-item-location {
+    font-weight: 400;
+}
+.noselect {
+    -moz-user-select: none;
+}
+#mini-clndr {
+    box-shadow: 4px 4px 0 #343434;
+    font-family: Asap,Helvetica,Arial;
+    margin: 0 auto;
+    width: 294px;
+}
+#mini-clndr .clndr {
+    border-bottom: 7px solid #69A776;
+    overflow: hidden;
+}
+#mini-clndr .clndr .controls {
+    background-color: #69A776;
+    color: #FFFFFF;
+}
+#mini-clndr .clndr .controls .clndr-previous-button, #mini-clndr .clndr .controls .clndr-next-button {
+    -moz-user-select: none;
+    cursor: pointer;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+    transition: background-color 0.5s ease 0s;
+    width: 15%;
+}
+
+#mini-clndr .clndr .controls .clndr-previous-button {
+    float: left;
+}
+#mini-clndr .clndr .controls .clndr-next-button {
+    float: right;
+}
+
+#mini-clndr .clndr .controls .clndr-previous-button:hover, #mini-clndr .clndr .controls .clndr-next-button:hover {
+    background-color: #528B5E;
+}
+#mini-clndr .clndr .controls .month {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 65%;
+}
+#mini-clndr .clndr .days-container {
+    display: inline-block;
+    height: 186px;
+    position: relative;
+    width: 294px;
+}
+#mini-clndr .clndr .days-container .days {
+    background-color: #EBEBEB;
+    height: 186px;
+    left: 0;
+    position: absolute;
+    transition: left 0.5s ease 0s;
+    width: 294px;
+}
+#mini-clndr .clndr .days-container .days .day, #mini-clndr .clndr .days-container .days .empty {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    color: #212121;
+    display: inline-block;
+    font-size: 12px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    text-align: center;
+    width: 38.7px;
+}
+#mini-clndr .clndr .days-container .days .day.event, #mini-clndr .clndr .days-container .days .empty.event {
+    background-color: #D2D2D2;
+    cursor: pointer;
+    transition: background-color 0.5s ease 0s;
+}
+#mini-clndr .clndr .days-container .days .day.event:hover, #mini-clndr .clndr .days-container .days .empty.event:hover {
+    background-color: #B8B8B8;
+}
+#mini-clndr .clndr .days-container .days .day.adjacent-month, #mini-clndr .clndr .days-container .days .empty.adjacent-month {
+    color: rgba(0, 0, 0, 0.3);
+}
+#mini-clndr .clndr .days-container .days .empty {
+    height: 31px;
+    vertical-align: bottom;
+}
+#mini-clndr .clndr .days-container .days .headers {
+    background-color: #97CE7F;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+#mini-clndr .clndr .days-container .days .headers .day-header {
+    color: #FFFFFF;
+    display: inline-block;
+    text-align: center;
+    width: 38px;
+}
+#mini-clndr .clndr .days-container .events {
+    background-color: #EBEBEB;
+    height: 186px;
+    left: 294px;
+    position: absolute;
+    transition: left 0.5s ease 0s;
+    width: 294px;
+}
+#mini-clndr .clndr .days-container .events .headers {
+    position: relative;
+}
+#mini-clndr .clndr .days-container .events .event-header {
+    background-color: #97CE7F;
+    color: #FFFFFF;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+    width: 100%;
+}
+#mini-clndr .clndr .days-container .events .x-button {
+    cursor: pointer;
+    font-size: 80%;
+    left: 20px;
+    position: absolute;
+    top: 7px;
+    transition: color 0.25s ease 0s;
+}
+#mini-clndr .clndr .days-container .events .x-button:hover {
+    color: #FFFFFF;
+}
+#mini-clndr .clndr .days-container .events .events-list {
+    height: 155px;
+    overflow: scroll;
+}
+#mini-clndr .clndr .days-container .events .events-list .event {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-top: 8px;
+    transition: background-color 0.25s ease 0s;
+}
+#mini-clndr .clndr .days-container .events .events-list .event:hover {
+    background-color: #F5F5F5;
+}
+#mini-clndr .clndr .days-container .events .events-list .event a {
+    background-color: rgba(0, 0, 0, 0);
+    color: #212121;
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.25s ease 0s;
+}
+#mini-clndr .clndr .days-container .events .events-list .event a:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #69A776;
+}
+#mini-clndr .clndr .days-container.show-events .days {
+    left: -294px;
+}
+#mini-clndr .clndr .days-container.show-events .events {
+    left: 0;
+}
+#clndr-3 {
+    background-color: #F4F4F4;
+    box-shadow: 4px 4px 0 #343434;
+    margin: 0 auto;
+    max-width: 400px;
+    padding-bottom: 12px;
+}
+#clndr-3 .month-bar {
+    padding: 12px;
+    text-align: center;
+}
+#clndr-3 .days-of-the-week {
+    width: 100%;
+}
+#clndr-3 .days-of-the-week .header-day {
+    display: inline-block;
+    float: left;
+    padding: 12px 0;
+    text-align: center;
+    width: 14.2857%;
+}
+#clndr-3 .days .day, #clndr-3 .days .empty {
+    float: left;
+    padding: 12px 0;
+    text-align: center;
+    width: 14.2857%;
+}
+#clndr-3 .days .day.today, #clndr-3 .days .empty.today {
+    background-color: #EBEBEB;
+    box-shadow: 0 0 8px #D4D4D4 inset;
+}
+#clndr-3 .days .day.event, #clndr-3 .days .empty.event {
+    color: #71BBD2;
+}
+#clndr-3 .days .day.adjacent-month .day-number, #clndr-3 .days .empty.adjacent-month .day-number {
+    opacity: 0.3;
+}
+
+.bg-gray {
+    background-color: #414141;
+}
+.bg-red {
+    background-color: #FF5A45;
+}
+.bg-red a {
+    color: #FF5A45;
+}
+.bg-red a:hover {
+    background-color: #FFB4AB;
+    color: #212121;
+}
+.bg-blue {
+    background-color: #71BBD2;
+}
+.bg-green {
+    background-color: #97CE7F;
+}
+.bg-yellow {
+    background-color: #DDCA9A;
+}
+.header {
+    padding: 30px 0;
+}
+.clndr-logo {
+    background-image: url("http://kylestetz.github.io/CLNDR/css/./clndr-logo.svg");
+    height: 113px;
+    margin: 0 auto;
+    width: 113px;
+}
+.banner-text {
+    color: #F4F4F4;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 2px 2px 2px #212121;
+}
+.banner-text.below {
+    margin-top: 30px;
+}
+.banner-text.below a {
+    background-color: rgba(0, 0, 0, 0);
+    color: #97CE7F;
+}
+.banner-text.below a:hover {
+    color: #D3EAC9;
+}
+.more-space {
+    margin-top: 3em;
+}
+@media all and (max-width: 768px) {
+#full-clndr .clndr-grid {
+    border: medium none;
+    width: 100%;
+}
+#full-clndr .event-listing {
+    display: none;
+}
+h1.banner-text {
+    font-size: 28px;
+}
+.banner-text.below {
+    font-size: 16px;
+    word-wrap: break-word;
+}
+code[class*="language-"], pre[class*="language-"] {
+    font-size: 14px;
+}
+}

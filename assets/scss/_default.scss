@@ -1,8 +1,3 @@
-/* General Demo Style */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Mountains+of+Christmas:400,700);
-
-
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 
@@ -30,12 +25,17 @@ a:active {
 a img {
 	border: none;
 }
-
+address {
+	color: #555;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 15px;
+}
 /* Header Style */
 .main,
 .container > header {
 	margin: 0 auto;
-	padding: 0.5em 0 0 0;
+	padding: 2em;
 }
 
 .container {
@@ -47,19 +47,26 @@ a img {
 	background: rgba(0,0,0,0.01);
 }
 
-.container > header h1 {
-	font-size: 7em;
-	line-height: 1.3;
+h1, h2, h2 {
+	font-family: 'Mountains of Christmas',cursive;
+}
+
+h1 {
+  font-size: 7em;
+  font-weight: 400;
+  line-height: 1;
 	margin: 0;
-	font-weight: 400;
-	font-family: 'Mountains of Christmas', cursive;
+}
+
+h2 {
+	font-size: 5.2em;
 }
 
 .container > header span {
 	display: block;
 	font-size: 60%;
-	opacity: 0.3;
-	padding: 0 0 0.6em 0.1em;
+	opacity: 0.5;
+	padding: 0;
 }
 
 /* Main Content */
@@ -194,73 +201,20 @@ a img {
 	color: #72b890;
 }
 
-.demo-1 .codrops-demos a {
-	background: #72b890;
-	color: #fff;
+#weather {
+	width: 30%;
+	text-align: center;
+	margin: 0 auto;
 }
-
-.demo-2 body {
-	color: #fff;
-	background: #c05d8e;
+#weather .temperatura,
+#weather img {
+	padding: 0 15px;
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 4em;
+	font-family: Lato, Arial, sans-serif;
 }
-
-.demo-2 a {
-	color: #d38daf;
-}
-
-.demo-2 a:hover,
-.demo-2 a:active {
-	color: #fff;
-}
-
-.demo-2 .codrops-demos a {
-	background: #883b61;
-	color: #fff;
-}
-
-.demo-2 .codrops-top a:hover {
-	background: rgba(255,255,255,0.3);
-	color: #333;
-}
-
-.demo-3 body {
-	color: #87968e;
-	background: #fff2e3;
-}
-
-.demo-3 a {
-	color: #ea5381;
-}
-
-.demo-3 .codrops-demos a {
-	background: #ea5381;
-	color: #fff;
-}
-
-.demo-4 body {
-	color: #999;
-	background: #fff2e3;
-	overflow: hidden;
-}
-
-.demo-4 a {
-	color: #1baede;
-}
-
-.demo-4 a:hover,
-.demo-4 a:active {
-	opacity: 0.6;
-}
-
-.demo-4 .codrops-demos a {
-	background: #1baede;
-	color: #fff;
-}
-
-.demo-5 body {
-	background: #fffbd6;
-}
-
 
 @media screen and (max-width: 46.0625em) {
 	.column {

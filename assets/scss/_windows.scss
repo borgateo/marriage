@@ -1,0 +1,102 @@
+.window:nth-child(1){
+    .content{
+        overflow: hidden;
+        position:absolute;
+        top:50%;
+        width:100%;
+        margin-top:-170px;
+        h1{
+            margin:0;
+        }
+        h2{
+            padding:0 30px;
+        }
+    }
+}
+
+// luogo
+.window:nth-child(2){
+    .content{
+        position:absolute;
+        top:10%;
+        left:2%;
+        padding: 0.2em 1.5em;
+        background: rgba(255,255,255,0.75);
+        h2{
+            color: #98B4CA;
+            text-align:center;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 1em;
+        }
+        p {
+            color: $dark-gray;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+// orario
+.window:nth-child(3){
+    .content{
+        position:absolute;
+        top:50%;
+        width:100%;
+        margin-top:-230px;
+        h2 {
+            text-align:center;
+            color: rgba(65, 65, 65, 0.7);
+            margin-top: 0;
+            padding: 0;
+        }
+        .explanation{
+            color:$dark-gray;
+            font-size:1.4em;
+            text-align:center;
+            padding:0 15%;
+        }
+    }
+}
+
+// code example
+.window:nth-child(4){
+    .content{
+        position:absolute;
+        top:50%;
+        width:100%;
+        margin-top:-230px;
+        h2{
+            text-align:center;
+        }
+        .explanation{
+            color:$light-gray;
+            font-size:1.4em;
+            text-align:center;
+            padding:0 15%;
+            li{
+                color:$light-gray;
+            }
+        }
+    }
+}
+
+// api
+.window:nth-child(5){
+    .content{
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin:-350px 0 0 -450px;
+    }
+    h2{
+        text-align:center;
+        color:$dark-gray;
+    }
+    .explanation{
+        color:$dark-gray;
+        font-size:1.4em;
+        text-align:center;
+        padding:0 15%;
+    }
+}
