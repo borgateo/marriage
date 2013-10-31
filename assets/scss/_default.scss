@@ -38,13 +38,16 @@ address {
 	padding: 2em;
 }
 
+.main {
+	height: 100%;
+}
 .container {
 	height: 100%;
 }
 
 .container > header {
 	text-align: center;
-	background: rgba(0,0,0,0.01);
+	background: rgba(255,255,255,0.2);
 }
 
 h1, h2, h2 {
@@ -72,6 +75,8 @@ h2 {
 /* Main Content */
 .main {
 	max-width: 69em;
+	overflow: hidden;
+	position: relative;
 }
 
 .column {
@@ -197,10 +202,21 @@ h2 {
 	background: #fff2e3;
 }
 
-.demo-1 a {
-	color: #72b890;
+.bergamot {
+	font-family: "bergamot";
+  font-size: 9em;
+  left: 0;
+  top: 0;
+  line-height: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 
+.bergamot-small {
+	font-family: "bergamot";
+  line-height: 0;	
+}
 #weather {
 	width: 30%;
 	text-align: center;
