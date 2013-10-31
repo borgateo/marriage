@@ -26,7 +26,7 @@
         background: rgba(255,255,255,0.85);
         border: 1px solid #BBB;
         width: 350px;
-        box-shadow: 1px 1px 6px #555, 0 0 16px #D4DBAF inset;
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.50), 0 0 16px #D4DBAF inset;
         h2{
             color: #98B4CA;
             text-align:center;
@@ -49,7 +49,7 @@
 }
 
 // orario
-.window:nth-child(3){
+#orario{
     .content{
         position:absolute;
         top:50%;
@@ -71,7 +71,7 @@
 }
 
 //nozze
-.window:nth-child(4){
+#nozze{
     background: #333 url(../images/vertical_cloth.png);
     .content{
         position:absolute;
@@ -98,8 +98,8 @@
     }
 }
 
-// api
-.window:nth-child(5){
+
+#contatti{
     .content{
         position:absolute;
         top:50%;
