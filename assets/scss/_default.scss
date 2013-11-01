@@ -50,19 +50,15 @@ address {
   background: rgba(255,255,255,0.2);
 }
 
-h1, h2, h2 {
-  font-family: 'Mountains of Christmas',cursive;
-}
-
 h1 {
-  font-size: 7em;
+  font-size: 5em;
   font-weight: 400;
   line-height: 1;
   margin: 0;
 }
 
 h2 {
-  font-size: 5.2em;
+  font-size: 4.2em;
 }
 
 .container > header span {
@@ -150,6 +146,12 @@ section {
   overflow: hidden;
 }
 
+.hr {
+  margin-top: 20px;
+  padding-top: 75px;
+  background: url("../images/line.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+}
+
 #welcome {
   background: url("../images/badge.png") repeat scroll center top rgba(0, 0, 0, 0);
   color: #5B4923;
@@ -159,7 +161,7 @@ section {
   height: 430px;
   letter-spacing: 0.04em;
   line-height: 30px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   padding: 88px 139px;
   text-align: center;
   width: 706px;
@@ -177,19 +179,10 @@ section {
   padding: 12px 0 0;
   width: 227px;
   height: 328px;
-  float: right;
   margin: 0 10px;
   width: 220px;
   text-align: center;
   position: relative;
-}
-#cntdwn {
-  background: none;
-  bottom: 75px;
-  left: 0;
-  margin: 0 auto;
-  position: absolute;
-  width: 100%;
 }
 
 .count h4 {
@@ -209,6 +202,8 @@ section {
 
 .profile {
   color: #333;
+  margin: 10px;
+  font-family: 'IM Fell French Canon',serif;
 }
 
 #arrows {
@@ -223,7 +218,7 @@ section {
   background: #F0AE8E;
   padding: 15px 0;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
   width: 100%;
   font-family: 'IM Fell French Canon',serif;
