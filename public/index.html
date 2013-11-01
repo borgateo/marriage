@@ -9,20 +9,96 @@
     <meta name="keywords" content="sposi, matrimonio" />
     <meta name="author" content="Matteo Borgato @borteo" />
     <link rel="shortcut icon" href="../favicon.ico"> 
+
+    <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=IM+Fell+French+Canon' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <script src="js/modernizr.custom.js"></script>
   </head>
   <body>
 
-    <section id="0" class="window">
-    <div class="container">
-      <header>
-        <h1>Matteo &amp; Thamiris <span>si sposano</span></h1>
-      </header>
-    </div><!-- /container -->
-    </section>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
 
-      <section id="orario" class="window">
+    <header>
+      <h1 class="hidden">Matteo &amp; Thamiris si sposano</h1>
+      <img alt="I Borgato" src="images/cisposiamo.jpg">
+    </header>
+    
+    <div id="zag"></div>
+
+    <div class="container">
+      <nav>
+        <ul>
+          <li id="menunav">
+            <a id="homenav" class="active" href="/">La coppia</a>
+          </li>
+          <li id="menunav">
+            <a id="rsvpnav" href="/rsvp">RSVP</a>
+          </li>
+          <li id="menunav">
+            <a id="detailsnav" href="/details">Dettagli Matrimonio</a>
+          </li>
+          <li id="menunav">
+            <a id="registrynav" href="/registry">Lista Nozze</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section>
+        <div id="welcome">
+          Olá! Benvenuto alla pagina digitale della coppia Borgato. Siamo veramente ansionsi di
+          celebrare il nostro matrimonio il 30 di Novembre con tutti!
+          Fino ad allora, ti invitiamo a esplorare il nostro sito &mdash; M &amp; T
+        </div>
+      </section>
+
+      <section>
+
+        <div class="twocol">
+          <img alt="Thamiris" src="images/thamiris.jpg">
+          <h1 class="profile">Lei</h1>
+          <p>Ciao mi chiamo Thamiris e sono tanto simpatica</p> 
+          <p style="font-style:italic;color:#aaa;">I kind of have a thing for Him →</p>
+        </div>
+        <div class="twocol">
+          <img alt="Matteo" src="images/matteo.jpg">
+          <h1 class="profile">Lui</h1>
+          <p>CIao gente! eccomi qua, Matteo per tutti Teo.</p> 
+          <p style="font-style:italic;color:#aaa;">← I kind of have a thing for Her</p>
+        </div>
+
+      </section>
+
+      <section>
+        <div class="count">
+          <p>Mancano:</p>
+          <script language="JavaScript">
+            TargetDate = "11/30/2013 12:30 PM";
+            BackColor = "transparent";
+            CountActive = true;
+            CountStepper = -1;
+            LeadingZero = true;
+            DisplayFormat = "<h4>%%D%% giorni</h4><h5>%%H%% h &amp; %%M%% min</h5>";
+            FinishMessage = "";
+          </script>
+          <script language="JavaScript" src="http://scripts.hashemian.com/js/countdown.js"></script>
+        </div>
+      </section>
+
+
+      <footer>
+        <div id="arrows"></div>
+
+      </footer>
+
+
+<!--    </div>
+    
         <div class="content">
           <div id="weather"></div>
 
@@ -133,7 +209,7 @@
         </div>
       </div>
       </section>
-
+-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
     <script src="js/jquery.windows.js"></script>
