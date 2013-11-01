@@ -216,8 +216,24 @@ section {
   width: 180px;
   height: 200px;
   margin: 10px auto;
- }
+}
 
+#shoes {
+  color: #333;
+  background: #F0AE8E;
+  padding: 15px 0;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+  font-family: 'IM Fell French Canon',serif;
+  font-size: 30px;
+}
+
+footer {
+  margin-bottom: 40px;
+  clear: both;
+}
 
 
 .column {
