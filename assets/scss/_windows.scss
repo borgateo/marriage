@@ -17,21 +17,27 @@
 }
 
 // luogo
-#luogo{
+#details {
+
+    header {
+        height: 640px;
+    }
+
     .content{
         position:absolute;
-        top:10%;
-        left:2%;
+        top: 40px;
+        left: 10px;
         padding: 0.2em 1.5em;
-        background: rgba(255,255,255,0.85);
+        background: white;
         border: 1px solid #BBB;
-        width: 350px;
+        width: 420px;
         box-shadow: 1px 1px 5px rgba(0,0,0,0.50), 0 0 16px #D4DBAF inset;
         h2{
             color: #98B4CA;
             text-align:center;
             margin: 0;
-            padding: 0;
+            padding: 0 0 15px 0;
+            font-family: 'IM Fell French Canon',serif;
         }
         p {
             color: $dark-gray;
@@ -46,6 +52,7 @@
             top: -25px;
         }
     }
+    
 }
 
 // orario
