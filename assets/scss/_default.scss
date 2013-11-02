@@ -172,6 +172,7 @@ section {
   height: auto;
   margin: 0 10px;
   width: 460px;
+  text-align: justify;
 }
 
 .count {
@@ -206,6 +207,15 @@ section {
   font-family: 'IM Fell French Canon',serif;
 }
 
+.thoughts {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.3);
+}
+.thamiris {
+  text-align: right;
+}
+
+
 #arrows {
   background: url("../images/arrows.png");
   width: 180px;
@@ -214,7 +224,7 @@ section {
 }
 
 #shoes {
-  color: #333;
+  color: rgba(0,0,0,0.4);
   background: #F0AE8E;
   padding: 15px 0;
   margin: 0 auto;
