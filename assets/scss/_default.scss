@@ -64,6 +64,8 @@ h1 {
 
 h2 {
   font-size: 4.2em;
+  font-family: 'IM Fell French Canon',serif;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .container > header span {
@@ -75,6 +77,10 @@ h2 {
 
 .hidden {
   display: none;
+}
+
+.centered {
+  text-align: center;
 }
 
 /* Main Content */
@@ -121,6 +127,7 @@ nav li {
 }
 
 nav a {
+  position: relative;
   color: #333;
   margin: 0 7px;
   font-size: 26px;
@@ -131,11 +138,41 @@ nav a {
   font-family: 'Fjalla One', sans-serif;
 }
 
-nav a:hover,
+nav a:hover {
+  color: #222;
+}
+
 nav a.active {
   border-bottom: 5px solid #F5C286;
   color: #222;
 }
+
+
+nav a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #F5C286;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
 
 .container {
   clear: both;
@@ -143,6 +180,14 @@ nav a.active {
   margin: 0 auto;
   padding: 0;
   width: 960px;
+}
+
+.container-small {
+  clear: both;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  width: 500px; 
 }
 
 section {
@@ -177,6 +222,9 @@ section {
   margin: 0 10px;
   width: 380px;
 }
+.onecol p {
+  text-align: justify;
+}
 
 .twocol {
   float: left;
@@ -186,6 +234,10 @@ section {
   text-align: justify;
 }
 
+.border {
+  border: 5px solid #F5C286;
+  margin-top: 10px;
+}
 .count {
   height: 151px;
   padding: 12px 0 0;
@@ -213,7 +265,7 @@ section {
 
 
 .profile {
-  color: #333;
+  color: rgba(0, 0, 0, 0.7);
   margin: 10px;
   font-family: 'IM Fell French Canon',serif;
 }
@@ -256,6 +308,7 @@ footer {
   float: left;
   height: auto;
   margin: 0 10px;
+  padding: 0 0 1px;
   width: 140px;
   vertical-align: top;
 }
@@ -263,6 +316,11 @@ footer {
 .row {
   display: block;
   clear: both;
+}
+h4 {
+  margin: 0;
+  font-family: 'IM Fell French Canon',serif;
+  font-size: 25px;
 }
 
 h3 {
@@ -283,7 +341,13 @@ h3 {
   padding: 0px
 }
 
-
+#cage {
+  background: url('../images/cage.png') no-repeat;
+  width: 450px;
+  height: 453px;
+  position: absolute;
+  right: 0;
+}
 
 
 .column {
@@ -412,4 +476,8 @@ h3 {
     display: none;
   }
 
+}
+
+.offset {
+  margin-top: 25px;
 }
