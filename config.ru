@@ -24,7 +24,7 @@ map "/dettagli" do
       'Content-Type'  => 'text/html', 
       'Cache-Control' => 'public, max-age=86400' 
     },
-    File.open('public/details.html', File::RDONLY)
+    File.open('public/dettagli.html', File::RDONLY)
   ]
 }
 end
