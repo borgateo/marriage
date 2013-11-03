@@ -216,6 +216,50 @@ section {
   width: 706px;
 }
 
+#number-badge {
+  background: url("../images/badge1.png") repeat scroll center top rgba(0, 0, 0, 0);
+  height: 298px;
+  margin: 0 auto;
+  width: 241px;
+  position: relative;
+}
+#participants {
+  bottom: 90px;
+  font-family: Fjalla One,serif;
+  font-size: 75px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: rgba(0,0,0, 0.3);
+}
+
+#people {
+  margin: 50px 0;
+  padding-bottom: 100px;
+  list-style: none;
+  li {
+    width: 230px;
+    display: inline-block;
+    font-family: 'Fjalla One',sans-serif;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: rgba(0,0,0,0.3);
+  }
+  img {
+    padding-right: 12px;
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+  }
+}
+
+.french {
+  font-family: 'IM Fell French Canon',serif;
+  font-size: 40px;
+  color: rgba(0,0,0, 0.7);
+}
+
 .onecol {
   float: left;
   height: auto;

@@ -48,18 +48,16 @@
       </ul>
     </nav>
 
-    <div id="cage"></div>
+     <div id="number-badge">
+        <div id="participants"></div>
+      </div>
 
     <div class="container-small offset">
-      <div class="row">
-        <h2 class="centered">Ti aspettiamo</h2>
-        <div class="centered hr"> 
-          <p>
-            <span id="participants"></span> persone hanno gi&agrave; aderito all'evento in Facebook.
-          </p>
-          <ul id="people"></ul>
-          
-        </div>
+      <h3 class="centered french">Sono gi&agrave; dei nostri</h3>
+      <p class="centered">Si ricorda gentilmente a tutti gli invitati al pranzo di confermare la presenza il prima possibile. Grazie.</p>
+
+      <div class="hr">
+        <ul id="people"></ul>
       </div>
      
     </div>
@@ -71,36 +69,47 @@
       </div>
     </footer>
 
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/oauth.js"></script>
+    <script type="text/javascript" src="js/jquery.cookies.js"></script>
     <script type="text/javascript">
+
+      var getPeople = function(access_token) {
+        $.ajax({
+          type: "GET",
+          //the url where you want to sent the userName and password to
+          url: 'https://graph.facebook.com/355909651212384/attending?access_token=' + access_token,
+          dataType: 'json',
+          async: false,
+          success: function (data) {
+            var names = data.data;
+            $("#participants").text(names.length);
+            $.each(names, function(i, item) {
+              var person = '<li>' + '<img src="http://graph.facebook.com/' +item.id+ '/picture"><span>' +item.name+ '</span></li>'
+              $('#people').append(person);
+              
+            });
+          },
+          error: function(req, status, er) {
+                  alert("ERROR: "+ req.responseText);
+          }
+        });
+      }
+
       OAuth.initialize('uwn8Mn5EnIGnjGgZZVNojwztx-o');
 
-      OAuth.popup('facebook', function(err, result) {
-        if (result) {
-          $.ajax
-          ({
-            type: "GET",
-            //the url where you want to sent the userName and password to
-            url: 'https://graph.facebook.com/355909651212384/attending?access_token=' + result.access_token,
-            dataType: 'json',
-            async: false,
-            success: function (data) {
-              var names = data.data;
-              $("#participants").text(names.length);
-              $.each(names, function(i, item) {
-                var person = '<li>' +item.name+ '<img src="http://graph.facebook.com/' +item.id+ '/picture"></li>'
-                $('#people').append(person);
-                
-              });
-            },
-            error: function(req, status, er) {
-                    alert("ERROR: "+ req.responseText);
-            }
-          });
-        }
-      });
+      if ($.cookie('FB')) {
+        getPeople($.cookie('FB'));
+      } else {
+        OAuth.redirect('facebook', "callback/url");
+        OAuth.callback('facebook', function(err, result) {
+          if (result) {
+            $.cookie('FB', result.access_token, { expires: 5 });
+            getPeople(result.access_token);
+          }
+        });
+      }
 
-      
     </script>
 
 
