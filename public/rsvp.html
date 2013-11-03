@@ -101,8 +101,7 @@
       if ($.cookie('FB')) {
         getPeople($.cookie('FB'));
       } else {
-        OAuth.redirect('facebook', "callback/url");
-        OAuth.callback('facebook', function(err, result) {
+        OAuth.popup('facebook', function (err, result) {
           if (result) {
             $.cookie('FB', result.access_token, { expires: 5 });
             getPeople(result.access_token);
