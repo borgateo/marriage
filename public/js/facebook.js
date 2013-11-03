@@ -22,19 +22,7 @@ $(function() {
         });
       }
 
-      OAuth.initialize('uwn8Mn5EnIGnjGgZZVNojwztx-o');
-
-      if ($.cookie('FB')) {
-        getPeople($.cookie('FB'));
-      } else {
-        OAuth.redirect('facebook', 'callback_url');
-        OAuth.callback('facebook', function (error, result) {
-          if (result) {
-            $.cookie('FB', result.access_token, { expires: 5 });
-            getPeople(result.access_token);
-          }
-        });
-      }
+    getPeople("212262562287769|e794e5c8e96bf53a750b8324520c3407");
 
 });
 
