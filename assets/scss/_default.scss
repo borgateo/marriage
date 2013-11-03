@@ -283,14 +283,9 @@ section {
   margin-top: 10px;
 }
 .count {
-  height: 151px;
-  padding: 12px 0 0;
-  width: 227px;
-  height: 328px;
-  margin: 0 10px;
-  width: 220px;
   text-align: center;
   position: relative;
+  top: -25px;
 }
 
 .count h4 {
@@ -304,7 +299,7 @@ section {
   padding: 0;
   margin: 0;
   font-family: 'IM Fell English SC', serif;
-  color: #5B4923;
+  color: #F5C286;
 }
 
 
@@ -365,6 +360,7 @@ h4 {
   margin: 0;
   font-family: 'IM Fell French Canon',serif;
   font-size: 25px;
+  font-weight: 500;
 }
 
 h3 {
