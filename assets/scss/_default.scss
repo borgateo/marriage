@@ -335,6 +335,19 @@ i {
   text-align: right;
 }
 
+.doll {
+  position: absolute;
+  @include transition-property(opacity);
+  @include transition-duration(0.2s);
+  @include transition-timing-function(ease-in);
+}
+
+.doll-man {
+  opacity: 1;
+}
+.doll-woman:hover {
+  opacity: 0;
+}
 
 #arrows {
   background: url("../images/arrows.png");
