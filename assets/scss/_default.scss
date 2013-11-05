@@ -285,9 +285,22 @@ section {
   text-align: justify;
 }
 
+.threecol {
+  float: left;
+  height: auto;
+  margin: 0 10px;
+  width: 620px;
+  text-align: justify;
+}
+
+.right-image {
+  float: right;
+}
+
 .border {
   border: 5px solid #F5C286;
   margin-top: 10px;
+  overflow: hidden;
 }
 .count {
   text-align: center;
@@ -335,18 +348,32 @@ i {
   text-align: right;
 }
 
-.doll {
+#doll {
+  border: 5px solid #F5C286;
+  margin-top: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 570px;
+  position: relative;
+}
+
+.doll-man,
+.doll-woman {
+  @include transition-property(all);
+  @include transition-duration(0.8s);
+  @include transition-timing-function(ease-in-out);
+}
+
+.doll-woman {
   position: absolute;
-  @include transition-property(opacity);
-  @include transition-duration(0.2s);
-  @include transition-timing-function(ease-in);
+  top:0px;
 }
 
 .doll-man {
-  opacity: 1;
+  position: absolute;
 }
-.doll-woman:hover {
-  opacity: 0;
+#doll:hover .doll-woman {
+  top: -570px;
 }
 
 #arrows {
@@ -383,6 +410,10 @@ footer {
   vertical-align: top;
 }
 
+.row-first {
+  display: block;
+  clear: both;
+}
 .row {
   display: block;
   clear: both;

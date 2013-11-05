@@ -1,29 +1,5 @@
 @import "compass";
 
-@import "http://fonts.googleapis.com/css?family=Lato:300,400,700";
-
 @import "normalize";
-@import "book";
-@import "bookblock";
+
 @import "default";
-
-// Windows
-@import "colors";
-@import "btn";
-
-.window{
-    width:100%;
-    height:100%;
-    position:absolute;
-}
-
-@for $i from 1 through 6{
-    .window:nth-child(#{$i}){
-        background:nth($colors, $i);
-        top:($i - 1) * 100%;
-    }
-}
-
-
-@import "calendar";
-@import "windows";
