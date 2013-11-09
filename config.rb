@@ -24,5 +24,3 @@ color_output = false
 # and then run:
 # sass-convert -R --from scss --to sass scss scss && rm -rf sass && mv scss sass
 preferred_syntax = :scss
-
-config.middleware.swap(ActionDispatch::Static, Rack::Zippy::AssetServer)
