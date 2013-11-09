@@ -1,8 +1,5 @@
-This article was forked from [Marshall Huss's Bamboo stack article](https://devcenter.heroku.com/articles/static-sites-on-heroku) and updated by [Lee Reilly](http://www.leereilly.net). Lee is a toolsmith and master pintsman hacking on [GitHub Enterprise](https://enterprise.github.com).
-
-# Static Sites with Ruby on Heroku/Cedar
-
-Sometimes you just have a static website with one or two pages. Here is a simple way to host your static site and cache it on Heroku using a [Rack](http://rack.rubyforge.org/) app.
+# My Marriage - Static Sites with Ruby on Heroku/Cedar
+# using a [Rack](http://rack.rubyforge.org/) app.
 
 Your folder should be organized like this:
 
