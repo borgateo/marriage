@@ -60,4 +60,6 @@ This assumes that your template uses relative references to the images and style
 
 And there you go, a static site being served on Heroku completely cached and easily served using a single [dyno](https://devcenter.heroku.com/articles/dynos).
 
-If this article is incorrect or outdated, or omits critical information, please [let us know](https://devcenter.heroku.com/articles/static-sites-on-heroku#). For all other issues, please see our [support channels](https://devcenter.heroku.com/articles/support-channels).
+
+run the server:
+$ rackup
