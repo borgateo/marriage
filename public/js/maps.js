@@ -1,6 +1,5 @@
 google.maps.visualRefresh = true;
 
-
 function initialize() {
   var municipio = new google.maps.LatLng(45.332017, 12.048785);
   var sagredo   = new google.maps.LatLng(45.390933, 11.999047);

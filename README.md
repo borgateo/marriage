@@ -1,7 +1,7 @@
 # My Marriage - Static Sites with Ruby on Heroku/Cedar
 # using a [Rack](http://rack.rubyforge.org/) app.
 
-Your folder should be organized like this:
+Folder should be organized like this:
 
 ```
 - MySite
@@ -13,30 +13,6 @@ Your folder should be organized like this:
     |- js
     |- css
 ```
-
-In `Gemfile` file add the following:
-
-```ruby
-source :rubygems
-
-gem 'rack'
-```
-
-You should use [bundler](https://devcenter.heroku.com/articles/bundler) to generate the `Gemfile.lock` file:
-
-```
-GEM
-  remote: http://rubygems.org/
-  specs:
-    rack (1.4.1)
-
-PLATFORMS
-  ruby
-
-DEPENDENCIES
-  rack
-```
-
 In `config.ru` file add the following:
 
 ```ruby
@@ -56,10 +32,17 @@ run lambda { |env|
 }
 ```
 
-This assumes that your template uses relative references to the images and stylesheets. Go ahead and deploy the app. If you are not sure how to deploy to Heroku check out the [quickstart guide](https://devcenter.heroku.com/articles/quickstart).
+first of all:
+`$ bundle install`
 
-And there you go, a static site being served on Heroku completely cached and easily served using a single [dyno](https://devcenter.heroku.com/articles/dynos).
+get packages for gulp
+`$ npm install`
 
+watch scss:
+`$ gulp watch`
 
 run the server:
-$ rackup
+`$ rackup`
+
+This assumes that your template uses relative references to the images and stylesheets. Go ahead and deploy the app. If you are not sure how to deploy to Heroku check out the [quickstart guide](https://devcenter.heroku.com/articles/quickstart).
+

@@ -113,7 +113,7 @@ nav {
   line-height: 26px;
   margin: 0 auto;
   padding: 20px 0 50px 0;
-  width: 520px;
+  width: 590px;
 }
 nav > ul {
   margin: 0;
@@ -324,8 +324,8 @@ section {
 
 .definition {
   background: rgba(255, 255, 255, 0.6);
-  @include border-radius(5px);
-  @include box-shadow(0 0 6px rgba(0, 0, 0, 0.3) inset);
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3) inset;
   padding: 10px 20px;
   margin-bottom: 25px; 
 }
@@ -466,14 +466,15 @@ footer {
   vertical-align: top;
 }
 
-.row-first {
-  display: block;
-  clear: both;
-}
+.row-first,
 .row {
   display: block;
   clear: both;
   overflow: hidden;
+
+}
+.row-first {
+  margin-bottom: 15px;
 }
 h4 {
   margin: 0;
