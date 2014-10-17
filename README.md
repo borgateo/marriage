@@ -1,4 +1,4 @@
-# My Marriage - Static Site with Ruby on Heroku/Cedar using a [Rack](http://rack.rubyforge.org/) app.
+# Static Site with Ruby on Heroku using [Rack](http://rack.rubyforge.org/) app.
 
 Project organised like this:
 
