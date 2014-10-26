@@ -32,7 +32,6 @@ function initialize() {
   });
 
 
-
   var marker = new google.maps.Marker({
     position: municipio,
     map: map,
@@ -47,10 +46,10 @@ function initialize() {
   });
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
+    infowindow.open(map, marker);
   });
   google.maps.event.addListener(marker1, 'click', function() {
-    infowindow1.open(map,marker1);
+    infowindow1.open(map, marker1);
   });
 
 }
