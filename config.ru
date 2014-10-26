@@ -12,7 +12,7 @@ map "/" do
       'Content-Type'  => 'text/html', 
       'Cache-Control' => 'public, max-age=86400' 
     },
-    File.open('public/index.html', File::RDONLY)
+    File.open('public/pages/index.html', File::RDONLY)
   ]
 }
 end
@@ -26,7 +26,7 @@ map "/dettagli" do
       'Content-Type'  => 'text/html', 
       'Cache-Control' => 'public, max-age=86400' 
     },
-    File.open('public/dettagli.html', File::RDONLY)
+    File.open('public/pages/dettagli.html', File::RDONLY)
   ]
 }
 end
@@ -39,7 +39,7 @@ map "/lista-nozze" do
       'Content-Type'  => 'text/html', 
       'Cache-Control' => 'public, max-age=86400' 
     },
-    File.open('public/lista-nozze.html', File::RDONLY)
+    File.open('public/pages/lista-nozze.html', File::RDONLY)
   ]
 }
 end
@@ -52,7 +52,7 @@ map "/rsvp" do
       'Content-Type'  => 'text/html', 
       'Cache-Control' => 'public, max-age=86400' 
     },
-    File.open('public/rsvp.html', File::RDONLY)
+    File.open('public/pages/rsvp.html', File::RDONLY)
   ]
 }
 end
@@ -65,7 +65,7 @@ map "/video" do
       'Content-Type'  => 'text/html', 
       'Cache-Control' => 'public, max-age=86400' 
     },
-    File.open('public/video.html', File::RDONLY)
+    File.open('public/pages/video.html', File::RDONLY)
   ]
 }
 end

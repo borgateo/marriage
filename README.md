@@ -3,14 +3,18 @@
 Project organised like this:
 
 ```
-- MySite
-  |- config.ru
-  |- Gemfile
+- Marriage
+  |- assets
+  	|- scss
+  	|- views
+      |- partials
   |- public
-    |- index.html
+    |- css
     |- images
     |- js
-    |- css
+    |- pages
+  |- config.ru
+  |- Gemfile
 ```
 
 - first of all:
