@@ -1,9 +1,9 @@
-# My Marriage - Static Sites with Ruby on Heroku/Cedar using a [Rack](http://rack.rubyforge.org/) app.
+# myMarriage - Static Site with Ruby on Heroku/Cedar using a [Rack](http://rack.rubyforge.org/) app.
 
-Project organised like this:
+The project is organised like this:
 
 ```
-- Marriage
+- myMarriage
   |- assets
   	|- scss
   	|- views
@@ -17,16 +17,7 @@ Project organised like this:
   |- Gemfile
 ```
 
-- first of all:
-`$ bundle install`
-
-- get packages for gulp
-`$ npm install`
-
-- build the stylesheets:
-`$ gulp`
-- or watch it:
-`$ gulp watch`
-
-- run the server:
-`$ rackup`
+1. `$ bundle install`
+1. `$ npm install`
+1. build: `$ gulp`  watch: `$ gulp watch`
+1. `$ rackup` localhost:9292
