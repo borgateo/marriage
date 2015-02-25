@@ -113,7 +113,7 @@ nav {
   line-height: 26px;
   margin: 0 auto;
   padding: 20px 0 50px 0;
-  width: 590px;
+  width: 610px;
 }
 nav > ul {
   margin: 0;
@@ -394,7 +394,7 @@ i {
 }
 
 #arrows {
-  background: url("../images/arrows.png");
+  background: url("../images/arrows-br.png");
   width: 180px;
   height: 200px;
   margin: 10px auto;
@@ -641,3 +641,61 @@ h3 {
 .offset {
   margin-top: 25px;
 }
+
+
+#mc_embed_signup {
+  width: 100%;
+  position: absolute;
+  top: 5%;
+}
+
+#mc_embed_signup form {
+  padding: 20px 15px 0 15px;
+  width: 480px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.75);
+  border-radius: .2em;
+  h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .button {
+    background-color: rgb(240, 174, 142);
+    border: 0 none;
+    border-radius: .15em;
+    clear: both;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px auto;
+    padding: 14px 22px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 100%;
+  }
+}
+
+.mc-field-group {
+  padding: 10px;
+  label {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+  }
+  input {
+    font-size: 18px;
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #DDD;
+  }
+}
+
+
+
+
+
