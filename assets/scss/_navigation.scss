@@ -75,9 +75,9 @@ nav a:focus::after {
 
 @include respond-to(600) {
   nav {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   nav > ul {
-    width: 360px;
+    width: 335px;
   }
 }

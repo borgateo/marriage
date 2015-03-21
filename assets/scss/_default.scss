@@ -177,6 +177,11 @@ section {
   }
 }
 
+.onecol {
+  width: 95%;
+  margin: 0 auto;
+}
+
 .left-title {
   float: left;
   height: auto;
@@ -184,27 +189,9 @@ section {
   width: 160px;
   font-family: "penna", serif;
   line-height: 1.5;
-}
-
-@include respond-to(1000) {
-  .left-title {
-    float: none;
+  span {
     display: block;
-    width: 100%;
   }
-  .threecol {
-    float: none;
-    margin: 0 auto;
-    display: block;
-  } 
-  .twocol {
-    float: none;
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
 }
 
 .right-image {
@@ -392,8 +379,10 @@ h4 {
 /********************/
 .wrapper {
   width: 50%;
-  min-width: 400px;
+  min-width: 335px;
   margin: 50px auto 125px;
+  overflow: visible;
+  clear: both;
 }
 
 .intro {
@@ -491,6 +480,13 @@ header, .header {
   h2 {
     font-size: 4.5em;
   }
+
+  #details .content {
+    width: 100%;
+    left: 0;
+    top: 20px;
+    background: rgba(255,255,255,0.95);
+  }
 }
 
 .rvsp {
@@ -499,11 +495,31 @@ header, .header {
   }
 }
 
-@include respond-to(600) {
-  #details .content {
+@include respond-to(1000) {
+  .left-title {
+    float: none;
+    display: block;
     width: 100%;
-    left: 0;
-    top: 20px;
-    background: rgba(255,255,255,0.95);
+    margin: 25px 0 0 0;
+    span {
+      display: inline-block;
+    }
   }
+  .threecol {
+    float: none;
+    margin: 0 auto;
+    display: block;
+  } 
+  .twocol {
+    float: none;
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .wrapper {
+    margin: 10px auto;
+  }
+
 }
