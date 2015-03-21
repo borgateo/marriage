@@ -5,6 +5,16 @@ var sass        = require('gulp-sass');
 var concat      = require('gulp-concat');
 var fileInclude = require('gulp-file-include');
 var del         = require('del');
+var uglify      = require('gulp-uglify');
+
+gulp.task('javascript', function() {
+  return gulp.src([
+    './assets/javascript/*.js'
+  ])
+  .pipe(concat('app.min.js'))
+  //.pipe(uglify())
+  .pipe(gulp.dest( 'public/js' ));
+});
 
 gulp.task('include', function() {
   gulp.src(['./assets/views/*.html'])
@@ -26,7 +36,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('clean', function() {
-  del(['./public/pages/', './public/css/'], function( err ) {
+  del(['./public/pages/', './public/css/'], function() {
     console.log('\nFiles Deleted :) \n');
   });
 });
@@ -35,6 +45,7 @@ gulp.task('clean', function() {
 gulp.task('watch', function() {
   gulp.watch('./assets/scss/**/*.scss', ['styles']);
   gulp.watch('./assets/views/**/*.html', ['include']);
+  gulp.watch('./assets/javascript/**/*.js', ['javascript']);
 });
 
-gulp.task('default', ['clean', 'styles', 'include']);
+gulp.task('default', ['clean', 'javascript', 'styles', 'include']);

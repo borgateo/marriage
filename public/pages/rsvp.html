@@ -3,17 +3,27 @@
 
   <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Matteo &amp; Thamiris - RSVP</title>
-  <meta name="description" content="Matteo e Thamiris si sono sposati in data 30 Novembre 2013" />
-  <meta name="keywords" content="sposi, matrimonio, matteo e thamiris, lista di nozze, evento speciale" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+  <title>Thamiris &amp; Matteo &middot; RSVP</title>
+  <meta name="description" content="Thamiris e Matteo se casam no dia 13 de Junho de 2015" />
+  <meta name="keywords" content="matteo e thamiris, casamento, evento especial" />
   <meta name="author" content="Matteo Borgato @borteo" />
   <link rel="shortcut icon" href="/images/favicon.ico">
 
-  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|IM+Fell+English+SC|IM+Fell+French+Canon|Fjalla+One' />
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
-  <script src="/js/modernizr.custom.js"></script>
+  <script type="text/javascript" src="/js/modernizr.custom.js"></script>
+
+  <script type="text/javascript">
+    (function(d) {
+      var config = {
+        kitId: 'llv5csn',
+        scriptTimeout: 3000
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
 </head>
 
   <body>
@@ -27,50 +37,75 @@
       <img alt="I Borgato" src="/images/cisposiamo1.jpg">
     </header>
     
-    <div id="zag"></div>
-
     <nav>
       <ul>
         <li id="menunav">
-          <a id="homenav" href="/">La coppia</a>
+          <a id="homenav" href="/">O Casal</a>
         </li>
         <li id="menunav">
           <a id="rsvpnav" class="active" href="/rsvp">RSVP</a>
         </li>
         <li id="menunav">
-          <a id="detailsnav" href="/dettagli">Dettagli Matrimonio</a>
+          <a id="detailsnav" href="/detalhes">Detalhes</a>
         </li>
         <li id="menunav">
-          <a id="registrynav" href="/lista-nozze">Lista Nozze</a>
+          <a id="registrynav" href="/presentes">Presentes</a>
         </li>
-        <li id="menunav">
-          <a id="live" href="/video">Video</a>
-        </li>
+        
       </ul>
     </nav>
 
-     <div id="number-badge">
-        <div id="participants">49</div>
+    <div class="container-small offset rvsp">
+      <form id="rvsp-form">
+        <h3 class="center">Por favor confirme a sua presença</h3>
+        <p>
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" required>
+        </p>
+
+        <p>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+        </p>
+
+        <p>
+          <label for="people">Acompanhante</label>
+          <select name="people" id="people">
+            <option value="0">0</option>  
+            <option value="1">1</option> 
+            <option value="2">2</option> 
+            <option value="3">3</option> 
+            <option value="4">4</option> 
+          </select>
+        </p>
+
+        <p>
+        <label for="comments">Comentário</label>
+          <textarea name="comments" id="comments" required></textarea>
+        </p>
+        
+        <p>
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Cancelar">
+        </p>
+        <p class="center">
+          Nota: confirmar presença até o dia 13 de Maio.
+        </p>
+      </form>
+      <div id="form-completed" class="disable">
+        <h3 class="center">Obrigado</h3>
+        <br/>
       </div>
-
-    <div class="container-small offset">
-      <h3 class="centered french">Erano dei nostri</h3>
-      <p class="centered">
-        Grazie a tutti gli invitati per aver condiviso questo indimenticabile e felice momento.
-      </p>
-
-      <div class="hr">
-        <ul id="people"></ul>
-      </div>    
     </div>
 
     <footer>
   <div id="arrows"></div>
   <div id="shoes">
-  Portati le scarpe da ballo!
+    Venha festejar conosco
   </div>
 </footer>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-45484320-1']);
@@ -82,6 +117,44 @@
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+
+    <script type="text/javascript">
+      Zepto(function($){
+        'use strict';
+
+        Parse.initialize(
+          'azCW3LEgiUAeLh0JpEGLucyUpjSsftmu3s1KUtJ2', 
+          '8rVDJEaKE2hocDUtWwjzyyED9ZexwhJHzrk7buVM'
+        );
+        
+        var CommentObject = Parse.Object.extend('CommentObject');
+        var form = $('#rvsp-form');
+
+        form.on('submit', function( e ) {
+          e.preventDefault();
+
+          var data      = {};
+          data.name     = $('#name').val();
+          data.email    = $('#email').val();
+          data.comments = $('#comments').val();
+          data.people   = $('#people').val();
+
+          var comment = new CommentObject();
+          comment.save(data, {
+            success: function() {
+              form.addClass('disable');
+              $('#form-completed').removeClass('disable');
+            },
+            error:function(e) {
+              console.dir(e);
+            }
+          });
+          
+        });
+      }); 
+
+    </script>
 
   </body>
 </html>

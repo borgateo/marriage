@@ -1,0 +1,46 @@
+form {
+
+  margin-bottom: 120px; 
+
+  input,
+  textarea {
+    border: 1px solid #b7e593;
+    width: 340px;
+  }
+
+  label {
+    width: 140px;
+    padding-right: .2em;
+    display: inline-block;
+  }
+  select {
+    font-size: 0.75em;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    border: none;
+    background: #E2E5E1;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: .4em 1em;
+    width: 48%;
+    font-family: "le-havre-rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-radius: .1em;
+    position: relative;
+    @include transition-property(all);
+    @include transition-duration(0.2s);
+    @include transition-timing-function(ease-in-out);
+  
+    &:hover {
+      opacity: 0.75;
+    }
+    &:active {
+      top: 2px;
+    }
+  }
+
+  input[type="submit"] {
+    background: #D2E8C3;
+  }
+}

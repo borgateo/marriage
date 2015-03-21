@@ -1,0 +1,83 @@
+.zag {
+  background-image: url("/images/zag.png");
+  background-repeat: repeat-x;
+  height: 25px;
+  width: 100%;
+  position: relative;
+  top: 25px;
+  z-index: 1;
+ }
+
+nav {
+  background: rgba(255, 255, 255, 0.25);
+  height: auto;
+  line-height: 26px;
+  position: relative;
+  top: -70px;
+  width: 100%;
+  font-size: 1.4em;
+}
+
+nav > ul {
+  margin: 0;
+  padding: 20px 0;
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+}
+
+nav li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  position: relative;
+  margin: 0 7px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a.active {
+  border-bottom: 5px solid #B7E593;
+  color: #222;
+}
+
+
+nav a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #B7E593;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+
+@include respond-to(600) {
+  nav {
+    font-size: 1.3em;
+  }
+  nav > ul {
+    width: 360px;
+  }
+}

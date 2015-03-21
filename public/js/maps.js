@@ -1,14 +1,14 @@
 google.maps.visualRefresh = true;
 
 function initialize() {
-  var municipio = new google.maps.LatLng(45.332017, 12.048785);
-  var sagredo   = new google.maps.LatLng(45.390933, 11.999047);
-  var point     = new google.maps.LatLng(45.360000, 11.999047);
+  var municipio = new google.maps.LatLng(-4.527074, -37.699361);
+  var sagredo   = new google.maps.LatLng(-4.525972, -37.704368);
+  var point     = new google.maps.LatLng(-4.527074, -37.699361);
   var mapOptions = {
     scrollwheel: false,
-    zoom: 13,
+    zoom: 16,
     center: point,
-    mapTypeId: google.maps.MapTypeId.TERRAIN
+    mapTypeId: google.maps.MapTypeId.SATELLITE
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
@@ -16,12 +16,12 @@ function initialize() {
   var contentString = '<div id="content">'+
   '<div id="siteNotice">'+
   '</div>'+
-  '<h3 id="firstHeading" class="firstHeading">Municipio</h1>'+
+  '<h3 id="firstHeading" class="firstHeading">Igrejinha</h3>'+
   '</div>';
   var contentString1 = '<div id="content">'+
   '<div id="siteNotice">'+
   '</div>'+
-  '<h3 id="firstHeading" class="firstHeading">Villa Sagredo</h1>'+
+  '<h3 id="firstHeading" class="firstHeading">La Trattoria</h3>'+
   '</div>';
 
   var infowindow = new google.maps.InfoWindow({
@@ -36,13 +36,13 @@ function initialize() {
     position: municipio,
     map: map,
     animation: google.maps.Animation.DROP,
-    title: 'Municipio'
+    title: 'Igreja'
   });
   var marker1 = new google.maps.Marker({
     position: sagredo,
     animation: google.maps.Animation.DROP,
     map: map,
-    title: 'Villa Sagredo'
+    title: 'La Trattoria'
   });
 
   google.maps.event.addListener(marker, 'click', function() {

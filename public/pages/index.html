@@ -3,126 +3,133 @@
 
   <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Matteo &amp; Thamiris - Sposi</title>
-  <meta name="description" content="Matteo e Thamiris si sono sposati in data 30 Novembre 2013" />
-  <meta name="keywords" content="sposi, matrimonio, matteo e thamiris, lista di nozze, evento speciale" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+  <title>Thamiris &amp; Matteo &middot; Sposi</title>
+  <meta name="description" content="Thamiris e Matteo se casam no dia 13 de Junho de 2015" />
+  <meta name="keywords" content="matteo e thamiris, casamento, evento especial" />
   <meta name="author" content="Matteo Borgato @borteo" />
   <link rel="shortcut icon" href="/images/favicon.ico">
 
-  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|IM+Fell+English+SC|IM+Fell+French+Canon|Fjalla+One' />
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
-  <script src="/js/modernizr.custom.js"></script>
+  <script type="text/javascript" src="/js/modernizr.custom.js"></script>
+
+  <script type="text/javascript">
+    (function(d) {
+      var config = {
+        kitId: 'llv5csn',
+        scriptTimeout: 3000
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
 </head>
 
   <body>
-    <!--[if lt IE 8]>
+    <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-    <header>
+    <header class="header">
       <h1 class="hidden">Matteo &amp; Thamiris se casam</h1>
-      <img alt="I Borgato" src="/images/cisposiamo1-original.jpg">
+
+      <img alt="I Borgato" src="/images/header-noi.png">
+      <img class="header-image" alt="I Borgato" src="/images/cisposiamo-title.png">
+
+      <div id="player-wrapper">
+        <div id="player"></div>
+      </div>
+
+      <div class="placeholder"></div>
     </header>
     
-    <!--div id="zag"></div-->
-
-    <!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup">
-<form action="//mailchimp.us2.list-manage.com/subscribe/post?u=1dbbfdac3ad7cc376721fee91&amp;id=5b00445c98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-  <h3>Olá pessoal! Inscreva-se para receber as novidades</h3>
-<div class="mc-field-group">
-  <label for="mce-EMAIL">Email<span class="asterisk">*</span>
-</label>
-  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-<div class="mc-field-group">
-  <label for="mce-FNAME">Nome</label>
-  <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-</div>
-<div class="mc-field-group">
-  <label for="mce-LNAME">Sobrenome</label>
-  <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-</div>
-  <div id="mce-responses" class="clear">
-    <div class="response" id="mce-error-response" style="display:none"></div>
-    <div class="response" id="mce-success-response" style="display:none"></div>
-  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_1dbbfdac3ad7cc376721fee91_5b00445c98" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Inscreva-se" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
-
-    <!--nav>
+    <nav>
       <ul>
         <li id="menunav">
-          <a id="homenav" class="active" href="/">O casal</a>
+          <a class="active" href="/">O Casal</a>
         </li>
         <li id="menunav">
-          <a id="rsvpnav" href="/rsvp">RSVP</a>
+          <a href="/rsvp">RSVP</a>
         </li>
         <li id="menunav">
-          <a id="detailsnav" href="/dettagli">Detalhes do matrimônio</a>
+          <a href="/detalhes">Detalhes</a>
         </li>
         <li id="menunav">
-          <a id="registrynav" href="/lista-nozze">Lista de Presentes</a>
+          <a href="/presentes">Presentes</a>
         </li>
       </ul>
     </nav>
 
-    <div id="welcome">
-      O casal Thamiris e Matteo, convida para o casamento <br/>
-      Per ricordare il lieto evento, ti invitiamo a esplorare il nostro sito &mdash; T &amp; M
-    </div>
-
-    <div class="container">
-
-      <section>
+    <section class="intro">
+      <div class="wrapper">
+        <h2>Bem-vindo</h2>
         <div class="twocol">
-          <img alt="Thamiris" src="images/thamiris.jpg">
-          <h2 class="profile">Lei</h2>
-          <p>Olá! Qui Thamiris. Provengo da Fortaleza, una bellissima e soleggiata città del Brasile. Amo viaggiare e la fotografia. Mi piacciono un sacco i bambini e fare volontariato. La natura, la montagna, le diverse culture in giro per il Mondo e Matteo sono le mie più grandi passioni.</p> 
-          <p class="thoughts thamiris">Sono pazza di lui →</p>
+          <p>
+             Aqui você encontrará todas as informações  sobre à nossa festa de casamento. Estamos muito felizes de partilhar essa data especial com você.
+          </p>
+          <p>
+            Nosso casamento será na bela e ensolarada Canoa Quebrada. Não poderiamos pensar em um lugar melhor para comemorar esta ocasião.
+          </p>
         </div>
         <div class="twocol">
-          <img alt="Matteo" src="images/matteo.jpg">
-          <h2 class="profile">Lui</h2>
-          <p>Hey folks. Matteo, per gli amici el Teo. Nato in un paesino in provincia di Venezia. Compiuti i 26 anni ho iniziato a girare per l'Europa. Amo vivere all'estero: apre la strada e la mente a molte realt&agrave;, emozionanti e stimolanti. Mi piace correre, giocare a calcio, il karate e viaggiare con la mia Thamiris.</p>
-          <p class="thoughts">← Lei &egrave; la mia vita</p>
+          <img alt="Bem-vindo!" src="images/welcome.jpg"/>
         </div>
+      </div>
+    </section>
 
-      </section>
-    
-      <section class="hr">
-        <div class="threecol">
-          <h2 class="profile">L'incontro</h2>
-          <p>Thamiris brasiliana, Matteo italiano. Il destino vuole che si incontrino ad <strong>Amsterdam,</strong> in Olanda, durante una fredda e piovosa domenica autunnale. Lui la nota da lontano e pensa di non aver mai visto una creatura cos&igrave; bella.<br/>
-          Si accorge che la donzella si trova in difficolt&agrave;. Corre in soccorso, e la salva da un vile marrano che la stava importunando.<br/>
-          Quindi, anche se non sa ballare neanche La Macarena, ma sorretto da cotanto coraggio, la invita a ballare.<br/>
-          Lei risponde con un sorriso e i due si innamorano dolcemente, ballando Rock'n'Roll in un pub chiamato <strong>"The Last Waterhole"</strong>.</p>
-        </div>
-        <div class="right-image">
-          <img src="/images/waterhole.png" alt="Waterhole">
-        </div>
-      </section>
+    <section class="title">
+      <div class="va-container">
+        <h2 class="va-middle">Ele &amp; Ela</h2>
+      </div>
+      <img alt="casal" class="stretch" src="images/sguardi.jpg"/>
+    </section>
 
-    </div-->
+    <section>
+      <div class="wrapper">
+        <div class="twocol">
+          <img alt="casal" class="round pull-left" src="images/matteo.jpg"/>
+          <h3 class="profile">Matteo</h3>
+          <p>Oi galera! Sou um veneziano amante da tecnologia que passa a maior parte do dia criando coisas no computador. Sonhador, viajante, focado, romântico e batalhador, às vezes dou uma de fotógrafo, karateca e jogador de futebol. 
+Meu coração pertence a uma mulher chamada Thamiris.</p> 
+          <p class="thoughts thamiris">&hearts; Eu sou dela →</p>
+        </div>
+        <div class="twocol">
+          <img alt="casal" class="round pull-left" src="images/thamiris.jpg"/>
+          <h3 class="profile">Thamiris</h3>
+          <p>Olá! Sou uma cearense que ama viajar, cozinhar e fotografar. Apaixonada, engraçada, dramática, atrasada e determinada. Sou encantada pela natureza, música, crianças e as  diferentes culturas ao redor do mundo. Tenho um grande amor que se chama Matteo.</p>
+          <p class="thoughts">← Eu sou dele &hearts;</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="title">
+      <div class="va-container">
+        <h2 class="va-middle">Onde tudo começou</h2>
+      </div>
+      <img class="coaster" src="/images/waterhole.png" alt="Waterhole">
+      <img class="stretch" alt="casal" src="/images/waterhole.jpg"/>
+    </section>
+
+    <section>
+      <div class="wrapper">
+        <p>Thamiris brasileira, Matteo italiano. O destino decide que eles se encontrem em Amsterdam, na Holanda, durante um frio e chuvoso domingo de outono.</p>
+
+        <p>Ele observa-a de longe e pensa que ele nunca viu uma coisa tão linda. Percebendo que a moça se encontra em perigo, corre para o resgate e a salva de um terrível vilão que a incomodava.</p>
+        <p>
+        E mesmo sem dançar nada, se enche de coragem e a convida para a pista de dança.
+        Ela responde com um sorriso e os dois se apaixonam perdidamente, dançando Rock'n'Roll em um pub chamado <strog>"The Last Waterhole"</strong>.</p>
+      </div>
+    </section>
 
     <footer>
-    <div id="arrows"></div>
-      <div id="shoes">
-        <img src="/images/dance.gif" style="margin: 0 auto;display: block;"/>
-        <p>Venha se divertir com a gente!</p>
-      </div>
-    </footer>
+  <div id="arrows"></div>
+  <div id="shoes">
+    Venha festejar conosco
+  </div>
+</footer>
 
-
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-45484320-1']);
@@ -134,6 +141,7 @@
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+    <script type="text/javascript" src="/js/app.min.js"></script>
 
   </body>
 </html>

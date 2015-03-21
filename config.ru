@@ -17,8 +17,7 @@ map "/" do
 }
 end
 
-
-map "/dettagli" do
+map "/rsvp" do
   run lambda { |env|
   [
     200, 
@@ -26,12 +25,12 @@ map "/dettagli" do
       'Content-Type'  => 'text/html', 
       'Cache-Control' => 'public, max-age=86400' 
     },
-    File.open('public/pages/dettagli.html', File::RDONLY)
+    File.open('public/pages/rsvp.html', File::RDONLY)
   ]
 }
 end
 
-map "/lista-nozze" do
+map "/presentes" do
   run lambda { |env|
   [
     200, 
@@ -44,7 +43,7 @@ map "/lista-nozze" do
 }
 end
 
-map "/rsvp" do
+map "/detalhes" do
   run lambda { |env|
   [
     200, 
@@ -52,7 +51,7 @@ map "/rsvp" do
       'Content-Type'  => 'text/html', 
       'Cache-Control' => 'public, max-age=86400' 
     },
-    File.open('public/pages/rsvp.html', File::RDONLY)
+    File.open('public/pages/dettagli.html', File::RDONLY)
   ]
 }
 end
