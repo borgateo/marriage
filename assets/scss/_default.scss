@@ -461,6 +461,12 @@ header, .header {
   z-index: 10;
 }
 
+@include respond-to(1000) {
+  header, .header {
+    min-height: 20vh;
+  }
+}
+
 #player-wrapper {
   visibility: hidden;
 }
