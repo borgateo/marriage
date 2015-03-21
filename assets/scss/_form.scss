@@ -44,3 +44,17 @@ form {
     background: #D2E8C3;
   }
 }
+
+
+@include respond-to(600) {
+  form {
+    label {
+      width: 140px;
+      display: block;
+    }
+    input,
+    textarea {
+      width: 100%;
+    }
+  }
+}

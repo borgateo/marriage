@@ -124,8 +124,14 @@ header img {
   clear: both;
   height: auto;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 5px;
   width: 500px; 
+}
+
+@include respond-to(600) {
+  .container-small {
+    width: 90%; 
+  }
 }
 
 section {
@@ -285,35 +291,35 @@ footer {
     height: 640px;
   }
 
-    .content{
-        position:absolute;
-        top: 40px;
-        right: 20px;
-        padding: 0.2em 1.5em;
-        background: rgba(255,255,255,0.75);
-        border: 1px solid #BBB;
-        width: 420px;
-        box-shadow: 1px 1px 5px rgba(0,0,0,0.50), 0 0 16px #D4DBAF inset;
-        h2 {
-          color: #698C4E;
-          text-align:center;
+  .content{
+      position:absolute;
+      top: 40px;
+      right: 20px;
+      padding: 0.2em 1.5em;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid #BBB;
+      width: 420px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.50), 0 0 16px #D4DBAF inset;
+      h2 {
+        color: #698C4E;
+        text-align:center;
+        margin: 0;
+        padding: 15px 0;
+        font-size: 4em;
+      }
+      p {
+          color: #333;
           margin: 0;
-          padding: 15px 0;
-          font-size: 4em;
-        }
-        p {
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .divider {
-            background: url(../images/divider.png) center center;
-            height: 40px;
-            width: 100%;
-            position: relative;
-            top: -25px;
-        }
-    }
+          padding: 0;
+      }
+      .divider {
+          background: url(/images/divider.png) center center;
+          height: 40px;
+          width: 100%;
+          position: relative;
+          top: -25px;
+      }
+  }
     
 }
 
@@ -489,5 +495,14 @@ header, .header {
 .rvsp {
   .disable {
     display: none;
+  }
+}
+
+@include respond-to(600) {
+  #details .content {
+    width: 100%;
+    left: 0;
+    top: 20px;
+    background: rgba(255,255,255,0.95);
   }
 }

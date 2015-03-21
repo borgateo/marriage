@@ -8,7 +8,10 @@ function initialize() {
     scrollwheel: false,
     zoom: 16,
     center: point,
-    mapTypeId: google.maps.MapTypeId.SATELLITE
+    zoomControl: false,
+    draggable: false,
+    streetViewControl: false,
+    mapTypeId: google.maps.MapTypeId.MAP
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
