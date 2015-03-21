@@ -52,7 +52,10 @@ function onPlayerStateChange( event ) {
 
   if ( event.data === YT.PlayerState.ENDED ) {
     playerWrapper.className = '';
-    event.target.playVideo();
+    
+    setTimeout(function() {
+      event.target.playVideo();
+    }, 2000);
   }
   
 }

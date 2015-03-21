@@ -464,10 +464,15 @@ header, .header {
 }
 
 #player-wrapper {
-  visibility: hidden;
+  //visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
 }
 #player-wrapper.active {
-  visibility: visible;
+  //visibility: visible;
+  opacity: 1;
 }
 
 
