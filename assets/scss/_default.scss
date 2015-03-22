@@ -457,6 +457,32 @@ header, .header {
   z-index: 10;
 }
 
+.scroll-down {
+  font-size: 4em;
+  left: 2.5%;
+  top: 5%;
+  position: absolute;
+  animation: fadeIn 10s 5s 5;
+  -moz-animation: fadeIn 10s 5s 5;
+  -webkit-animation: fadeIn 10s 5s 5;
+  -o-animation: fadeIn 10s 5s 5;
+  z-index: 999999;
+  a {
+    color: #FFF;
+    text-decoration: none;
+  }
+  span {
+    font-size: 0.35em;
+    display: none;
+    background: rgba(255,255,255,0.5);
+    color: #3a3f36;
+    padding: .2em;
+  }
+  &:hover span {
+    display: block;
+  }
+}
+
 @include respond-to(1000) {
   header, .header {
     min-height: 20vh;
@@ -527,4 +553,45 @@ header, .header {
     margin: 10px auto;
   }
 
+}
+
+
+@keyframes fadeIn{
+  0%{margin-top: 0;}
+  10%{margin-top: 10px;}
+  20%{margin-top: 0;}
+  30%{margin-top: 10px;}
+  40%{margin-top: 0;}
+  50%{margin-top: 10px;}
+  60%{margin-top: 0; }
+}
+
+@-moz-keyframes fadeIn{
+  0%{margin-top: 0;}
+  10%{margin-top: 10px;}
+  20%{margin-top: 0;}
+  30%{margin-top: 10px;}
+  40%{margin-top: 0;}
+  50%{margin-top: 10px;}
+  60%{margin-top: 0; }
+}
+
+@-webkit-keyframes fadeIn{
+  0%{margin-top: 0;}
+  10%{margin-top: 10px;}
+  20%{margin-top: 0;}
+  30%{margin-top: 10px;}
+  40%{margin-top: 0;}
+  50%{margin-top: 10px;}
+  60%{margin-top: 0; }
+}
+
+@-o-keyframes fadeIn{
+  0%{margin-top: 0;}
+  10%{margin-top: 10px;}
+  20%{margin-top: 0;}
+  30%{margin-top: 10px;}
+  40%{margin-top: 0;}
+  50%{margin-top: 10px;}
+  60%{margin-top: 0; }
 }
