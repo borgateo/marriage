@@ -442,7 +442,7 @@ section.title {
 header, .header {
   position: relative;
   overflow: hidden;
-  min-height: 75vh;
+  min-height: 50vh;
   background: rgb(210, 232, 195);
   iframe {
     position: absolute;
@@ -555,6 +555,9 @@ header, .header {
 
 }
 
+#video-container video {
+  width: 100%;
+}
 
 @keyframes fadeIn{
   0%{margin-top: 0;}

@@ -1,5 +1,7 @@
 'use strict';
 
+// tutto tempo sprecato. bastava usare un HTML5 video
+
 var player;
 var playerWrapper  = document.getElementById('player-wrapper');
 
