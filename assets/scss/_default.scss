@@ -226,6 +226,7 @@ section {
   border-radius: .2em;
   width: 75%;
   margin: 0 auto;
+  padding: 0;
   li {
     padding: 10px 0;
     font-size: 1.05em;
@@ -489,19 +490,6 @@ header, .header {
   }
 }
 
-#player-wrapper {
-  //visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-  transition: opacity 0.3s, transform 0.3s;
-}
-#player-wrapper.active {
-  //visibility: visible;
-  opacity: 1;
-}
-
-
 @include respond-to(600) {
 
   body {
@@ -558,6 +546,8 @@ header, .header {
 #video-container video {
   width: 100%;
 }
+
+
 
 @keyframes fadeIn{
   0%{margin-top: 0;}
