@@ -23,20 +23,26 @@ nav.opaque {
 
 @include respond-to(600) {
   nav {
-    top: -70px;
+    top: -50px;
   }
   nav.opaque {
-    top: -50px;
+    top: -35px;
   }
 }
 
 nav > ul {
   margin: 0;
-  padding: 20px 0;
+  padding: .8em 0;
   width: 500px;
   margin: 0 auto;
   position: relative;
   z-index: 100;
+}
+
+@include respond-to(600) {
+  nav > ul {
+    padding: .45em 0;
+  }
 }
 
 nav li {
