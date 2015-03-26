@@ -15,8 +15,10 @@
     
       <img class="header-image" alt="I Borgato" src="/images/cisposiamo-title.png">
 
+      <!-- autoplay="false" -->
+
       <figure id="video-container">
-        <video poster="/images/header-noi.png" autoplay="true" loop="true" preload="metadata" poster="img/poster.jpg">
+        <video id="video" poster="/images/header-noi.png" loop="true" preload="metadata" poster="img/poster.jpg">
           <source src="https://dl.dropboxusercontent.com/u/1089758/TnM.mp4" type="video/mp4">
           <source src="https://dl.dropboxusercontent.com/u/1089758/TnM.webm" type="video/webm">
           <source src="https://dl.dropboxusercontent.com/u/1089758/TnM.ogv" type="video/ogg">
@@ -24,7 +26,7 @@
       </figure>
 
       <div class="scroll-down">
-        <a href="#intro">ꜜ</a>
+        <a href="#intro"></a>
         <span>Dá uma descidinha</span>
       </div>
     </header>
@@ -111,6 +113,7 @@ Meu coração pertence a uma mulher chamada Thamiris.</p>
     </section>
 
     @@include('partials/_footer.html')
+    <script type="text/javascript" src="/js/app.min.js?v1.1"></script>
 
   </body>
 </html>

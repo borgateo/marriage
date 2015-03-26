@@ -1,72 +1,23 @@
-'use strict';
 
-// tutto tempo sprecato. bastava usare un HTML5 video
+!(function( window ){
+  'use strict';
 
-var player;
-var playerWrapper  = document.getElementById('player-wrapper');
+  var isChrome = !!window.chrome; 
 
-var tag            = document.createElement('script');
-tag.src            = 'https://www.youtube.com/iframe_api';
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  var vid =  [
+    '<video id="video" poster="/images/header-noi.png" loop="true" preload="none" poster="img/poster.jpg">',
+    '<source src="https://dl.dropboxusercontent.com/u/1089758/TnM.webm" type="video/webm">'
+  ].join('');
 
-var getViewPort = function() {
-  var el   = document.documentElement;
-  var body = document.getElementsByTagName('body')[0];
-  var x    = window.innerWidth || el.clientWidth || body.clientWidth;
-  // heightDoc = w.innerHeight|| e.clientHeight|| g.clientHeight;
-
-  // video format is 16:9
-  var y = (x * 9) / 16;
-
-  return [ x, y ];
-}
-
-function onYouTubeIframeAPIReady() {
-  var videoSize = getViewPort();
-
-  player = new YT.Player('player', {
-    width: videoSize[ 0 ],
-    height: videoSize[ 1 ],
-    videoId: 'A_WcyxU3i9E',
-    playerVars: { 
-      'autoplay': 1,
-      'controls': 0,
-      'showinfo': 0,
-      //'loop': 1,   // loop doesn't work
-      'playlist': 'A_WcyxU3i9E'
-    },
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
-
-function onPlayerReady( event ) {
-  event.target.playVideo();
-}
-
-function onPlayerStateChange( event ) {
-  if ( event.data === YT.PlayerState.PLAYING ) {
-    playerWrapper.className = 'active';
+  if( isChrome ) {
+    $('#video').replaceWith( $( vid ) );
   }
 
-  if ( event.data === YT.PlayerState.ENDED ) {
-    playerWrapper.className = '';
-    
-    setTimeout(function() {
-      event.target.playVideo();
-    }, 2000);
-  }
-  
-}
+  $('#video')[0].play();
 
-window.addEventListener('resize', function( event ){
-  var playerEl = document.getElementById('player');
-  if ( !playerEl ) return;
+})( window );
 
-  var videoSize   = getViewPort();
-  playerEl.width  = videoSize[ 0 ];
-  playerEl.height = videoSize[ 1 ];
-});
+
+
+
+
