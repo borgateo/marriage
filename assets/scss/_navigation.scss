@@ -18,6 +18,12 @@ nav {
   font-size: 1.33em;
 }
 
+@include respond-to(600) {
+  nav {
+    top: -70px;
+  }
+}
+
 nav > ul {
   margin: 0;
   padding: 20px 0;
