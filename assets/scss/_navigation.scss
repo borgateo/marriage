@@ -9,13 +9,16 @@
  }
 
 nav {
-  background: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.25);
   height: auto;
   line-height: 26px;
   position: relative;
   top: -105px;
   width: 100%;
   font-size: 1.33em;
+}
+nav.opaque {
+  background: #f9fef9;
 }
 
 @include respond-to(600) {

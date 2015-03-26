@@ -13,6 +13,7 @@
   if( isChrome && mobilecheck() ) {
     var video = $('#video');
     video.attr('controls', '');
+    $('nav').addClass('opaque');
   }
 
   $('#video')[0].play();
