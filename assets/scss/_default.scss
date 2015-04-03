@@ -175,6 +175,9 @@ section {
     vertical-align: top;
     margin-top: 30px;
   }
+  p {
+    margin-top: .3em;
+  }
 }
 
 .onecol {
@@ -188,9 +191,14 @@ section {
   margin: 0 10px;
   width: 160px;
   font-family: "penna", serif;
-  line-height: 1.5;
   span {
     display: block;
+  }
+  h3 {
+    color: #7E8B75;
+    line-height: 1;
+    font-size: 2.6em;
+    padding-top: .025em;
   }
 }
 
@@ -288,7 +296,6 @@ footer {
       background: rgba(255,255,255,0.75);
       border: 1px solid #BBB;
       width: 420px;
-      box-shadow: 1px 1px 5px rgba(0,0,0,0.50), 0 0 16px #D4DBAF inset;
       h2 {
         color: #698C4E;
         text-align:center;
@@ -533,6 +540,9 @@ header, .header {
     margin: 25px 0 0 0;
     span {
       display: inline-block;
+    }
+    h3 {
+      padding: 0.8em;
     }
   }
   .threecol {
