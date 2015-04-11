@@ -1,0 +1,15 @@
+.no-js .ip-header {
+	position: relative;
+	min-height: 0px;
+}
+
+.no-js .ip-header .ip-logo {
+	margin-top: 20px;
+	height: 180px;
+	opacity: 1;
+	transform: none;
+}
+
+.no-js .ip-header .ip-logo svg path {
+	fill: #fff;
+}

@@ -1,0 +1,135 @@
+.ip-header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  min-height: 480px;
+  width: 100%;
+  height: 100%;
+  background: #f9fef9;
+}
+
+.ip-logo,
+.ip-loader {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: default;
+  pointer-events: none;
+}
+
+.ip-logo {
+  top: 0;
+  height: 100%;
+  @include transform( translate3d(0, 25%, 0) );
+} 
+
+.ip-loader {
+  bottom: 20%;
+}
+
+.ip-header svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.ip-header .ip-logo svg {
+  max-width: 700px;
+  width: 100%;
+  fill: rgb(126, 139, 117);
+  path {
+    fill: rgb(126, 139, 117);
+    stroke: white;
+    stroke-width: 0.05;
+  }
+}
+
+@include respond-to(1000) {
+  .ip-header .ip-logo svg {
+    max-width: 400px;
+  }
+}
+
+.ip-header .ip-loader svg path {
+  fill: none;
+  stroke-width: 5;
+}
+
+.ip-header .ip-loader svg path.ip-loader-circlebg {
+  stroke: #ddd;
+}
+
+.ip-header .ip-loader svg path.ip-loader-circle {
+  transition: stroke-dashoffset 0.2s;
+  stroke: rgb(126, 139, 117);
+}
+
+
+.loading .ip-logo,
+.loading .ip-loader {
+  opacity: 1;
+  @include animation( animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both );
+}
+
+.loading .ip-loader {
+  @include animation-delay( 0.2s );
+}
+
+@include keyframes(animInitialHeader) {
+  from { 
+    opacity: 0; 
+    transform: translate3d(0,800px,0); 
+  }
+}
+
+
+
+.loaded .ip-logo,
+.loaded .ip-loader {
+  opacity: 1;
+}
+
+.loaded .ip-logo {
+  transform-origin: 50% 0;
+  @include animation( animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards );
+}
+
+@include keyframes(animLoadedLogo) {
+  to { 
+    transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); 
+  }
+}
+
+.loaded .ip-logo svg {
+  transition: all 0.5s ease 0.3s;
+  fill: #fff;
+  path {
+    fill: white;
+  }
+}
+
+
+.loaded .ip-loader {
+  @include animation(animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards);
+}
+
+@include keyframes(animLoadedLoader) {
+  to { 
+    opacity: 0; 
+    transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); 
+  }
+}
+
+.loaded .ip-header {
+  @include animation( animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards );
+}
+
+@include keyframes(animLoadedHeader) {
+  to { 
+    @include transform( translate3d(0,-105%,0) ); 
+  }
+}
+
+.layout-switch .ip-header {
+  position: absolute;
+}

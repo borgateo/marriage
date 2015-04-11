@@ -399,8 +399,11 @@ h4 {
     font-size: 1.6em;
     line-height: 1.1;
   }
-  
+  p:first-child {
+    margin-top: 2em;
+  }  
 }
+
 
 .stretch {
   max-width: 100%;
@@ -469,7 +472,7 @@ header, .header {
   -moz-animation: fadeIn 10s 5s 5;
   -webkit-animation: fadeIn 10s 5s 5;
   -o-animation: fadeIn 10s 5s 5;
-  z-index: 999999;
+  z-index: 100;
   a {
     text-decoration: none;
     background: url("/images/arrow-down.png") center center no-repeat;
